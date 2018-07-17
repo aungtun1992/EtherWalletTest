@@ -7,21 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87A8B39ADEA45985AF4D5CB2 /* Pods_etherWalletTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C61430A4BC982742AB197C /* Pods_etherWalletTest.framework */; };
 		BD45410720FB7FA60069A731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45410620FB7FA60069A731 /* AppDelegate.swift */; };
-		BD45410920FB7FA60069A731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45410820FB7FA60069A731 /* ViewController.swift */; };
-		BD45410C20FB7FA60069A731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45410A20FB7FA60069A731 /* Main.storyboard */; };
+		BD45410920FB7FA60069A731 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45410820FB7FA60069A731 /* mainViewController.swift */; };
 		BD45410E20FB7FA80069A731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45410D20FB7FA80069A731 /* Assets.xcassets */; };
 		BD45411120FB7FA80069A731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45410F20FB7FA80069A731 /* LaunchScreen.storyboard */; };
+		BD45411F20FB90320069A731 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD45411E20FB90320069A731 /* Default-568h@2x.png */; };
+		BD45412A20FC33100069A731 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45412820FC33100069A731 /* WalletTableViewCell.swift */; };
+		BD45412B20FC33100069A731 /* WalletTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD45412920FC33100069A731 /* WalletTableViewCell.xib */; };
+		BD45412E20FC39A30069A731 /* WalletTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45412D20FC39A30069A731 /* WalletTableViewController.swift */; };
+		BD45413220FC52A10069A731 /* ImportWalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413120FC52A10069A731 /* ImportWalletViewController.swift */; };
+		BD45413420FC5D0E0069A731 /* CreatMnemonicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413320FC5D0D0069A731 /* CreatMnemonicViewController.swift */; };
+		BD45413620FC79480069A731 /* EthWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413520FC79480069A731 /* EthWalletManager.swift */; };
+		BD45413820FC7A700069A731 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413720FC7A700069A731 /* Strings.swift */; };
+		BD45413A20FC89F70069A731 /* CreateImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413920FC89F70069A731 /* CreateImportViewController.swift */; };
+		BDB4F86C20FDD9E500F9DAAD /* WalletData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */; };
+		BDE5BF2220FDFF9300328104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45410A20FB7FA60069A731 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01C61430A4BC982742AB197C /* Pods_etherWalletTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etherWalletTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B2198A76F2F9D69BB7304A3 /* Pods-etherWalletTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etherWalletTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-etherWalletTest/Pods-etherWalletTest.release.xcconfig"; sourceTree = "<group>"; };
+		4C21D93023A00DC7E7F535AC /* Pods-etherWalletTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etherWalletTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-etherWalletTest/Pods-etherWalletTest.debug.xcconfig"; sourceTree = "<group>"; };
 		BD45410320FB7FA60069A731 /* etherWalletTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etherWalletTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD45410620FB7FA60069A731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD45410820FB7FA60069A731 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD45410820FB7FA60069A731 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		BD45410B20FB7FA60069A731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD45410D20FB7FA80069A731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD45411020FB7FA80069A731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD45411220FB7FA80069A731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD45411E20FB90320069A731 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BD45412820FC33100069A731 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
+		BD45412920FC33100069A731 /* WalletTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalletTableViewCell.xib; sourceTree = "<group>"; };
+		BD45412D20FC39A30069A731 /* WalletTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewController.swift; sourceTree = "<group>"; };
+		BD45413120FC52A10069A731 /* ImportWalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportWalletViewController.swift; sourceTree = "<group>"; };
+		BD45413320FC5D0D0069A731 /* CreatMnemonicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatMnemonicViewController.swift; sourceTree = "<group>"; };
+		BD45413520FC79480069A731 /* EthWalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthWalletManager.swift; sourceTree = "<group>"; };
+		BD45413720FC7A700069A731 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		BD45413920FC89F70069A731 /* CreateImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImportViewController.swift; sourceTree = "<group>"; };
+		BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87A8B39ADEA45985AF4D5CB2 /* Pods_etherWalletTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16040E90017DDE742C966A6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C61430A4BC982742AB197C /* Pods_etherWalletTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD4540FA20FB7FA60069A731 = {
 			isa = PBXGroup;
 			children = (
+				BD45411E20FB90320069A731 /* Default-568h@2x.png */,
 				BD45410520FB7FA60069A731 /* etherWalletTest */,
 				BD45410420FB7FA60069A731 /* Products */,
+				DE8D3A41F63A126C84330B5F /* Pods */,
+				16040E90017DDE742C966A6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +90,72 @@
 		BD45410520FB7FA60069A731 /* etherWalletTest */ = {
 			isa = PBXGroup;
 			children = (
+				BD45411920FB7FC60069A731 /* Model */,
+				BD45411820FB7FBD0069A731 /* View */,
+				BD45411A20FB7FCB0069A731 /* Controller */,
+				BD45411D20FB8FC00069A731 /* Supporting */,
 				BD45410620FB7FA60069A731 /* AppDelegate.swift */,
-				BD45410820FB7FA60069A731 /* ViewController.swift */,
-				BD45410A20FB7FA60069A731 /* Main.storyboard */,
-				BD45410D20FB7FA80069A731 /* Assets.xcassets */,
-				BD45410F20FB7FA80069A731 /* LaunchScreen.storyboard */,
 				BD45411220FB7FA80069A731 /* Info.plist */,
 			);
 			path = etherWalletTest;
+			sourceTree = "<group>";
+		};
+		BD45411820FB7FBD0069A731 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BD45412C20FC332F0069A731 /* CustomCells */,
+				BD45410F20FB7FA80069A731 /* LaunchScreen.storyboard */,
+				BD45410A20FB7FA60069A731 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BD45411920FB7FC60069A731 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD45413520FC79480069A731 /* EthWalletManager.swift */,
+				BD45413720FC7A700069A731 /* Strings.swift */,
+				BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD45411A20FB7FCB0069A731 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BD45410820FB7FA60069A731 /* mainViewController.swift */,
+				BD45413920FC89F70069A731 /* CreateImportViewController.swift */,
+				BD45413320FC5D0D0069A731 /* CreatMnemonicViewController.swift */,
+				BD45413120FC52A10069A731 /* ImportWalletViewController.swift */,
+				BD45412D20FC39A30069A731 /* WalletTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BD45411D20FB8FC00069A731 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BD45410D20FB7FA80069A731 /* Assets.xcassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		BD45412C20FC332F0069A731 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				BD45412820FC33100069A731 /* WalletTableViewCell.swift */,
+				BD45412920FC33100069A731 /* WalletTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		DE8D3A41F63A126C84330B5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C21D93023A00DC7E7F535AC /* Pods-etherWalletTest.debug.xcconfig */,
+				3B2198A76F2F9D69BB7304A3 /* Pods-etherWalletTest.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD45411520FB7FA80069A731 /* Build configuration list for PBXNativeTarget "etherWalletTest" */;
 			buildPhases = (
+				DA8FBC7A9287197704175D4F /* [CP] Check Pods Manifest.lock */,
 				BD4540FF20FB7FA60069A731 /* Sources */,
 				BD45410020FB7FA60069A731 /* Frameworks */,
 				BD45410120FB7FA60069A731 /* Resources */,
+				53F0D94CB35A98599D4919BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,19 +219,90 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD45411120FB7FA80069A731 /* LaunchScreen.storyboard in Resources */,
+				BDE5BF2220FDFF9300328104 /* Main.storyboard in Resources */,
+				BD45411F20FB90320069A731 /* Default-568h@2x.png in Resources */,
+				BD45412B20FC33100069A731 /* WalletTableViewCell.xib in Resources */,
 				BD45410E20FB7FA80069A731 /* Assets.xcassets in Resources */,
-				BD45410C20FB7FA60069A731 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53F0D94CB35A98599D4919BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-etherWalletTest/Pods-etherWalletTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
+				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
+				"${BUILT_PRODUCTS_DIR}/libsodium/libsodium.framework",
+				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
+				"${BUILT_PRODUCTS_DIR}/web3swift/web3swift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libsodium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/web3swift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-etherWalletTest/Pods-etherWalletTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8FBC7A9287197704175D4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-etherWalletTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD4540FF20FB7FA60069A731 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD45410920FB7FA60069A731 /* ViewController.swift in Sources */,
+				BD45412A20FC33100069A731 /* WalletTableViewCell.swift in Sources */,
+				BD45410920FB7FA60069A731 /* mainViewController.swift in Sources */,
+				BD45413820FC7A700069A731 /* Strings.swift in Sources */,
+				BD45413A20FC89F70069A731 /* CreateImportViewController.swift in Sources */,
+				BDB4F86C20FDD9E500F9DAAD /* WalletData.swift in Sources */,
+				BD45413620FC79480069A731 /* EthWalletManager.swift in Sources */,
+				BD45412E20FC39A30069A731 /* WalletTableViewController.swift in Sources */,
+				BD45413220FC52A10069A731 /* ImportWalletViewController.swift in Sources */,
+				BD45413420FC5D0E0069A731 /* CreatMnemonicViewController.swift in Sources */,
 				BD45410720FB7FA60069A731 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +445,7 @@
 		};
 		BD45411620FB7FA80069A731 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C21D93023A00DC7E7F535AC /* Pods-etherWalletTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,12 +457,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.activate.aung.etherWalletTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BD45411720FB7FA80069A731 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B2198A76F2F9D69BB7304A3 /* Pods-etherWalletTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,7 +475,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.activate.aung.etherWalletTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
