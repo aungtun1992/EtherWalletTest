@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Model/EtherWallet.swift"
+            timestampString = "553485732.783239"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/CreatMnemonicViewController.swift"
+            timestampString = "553517858.671672"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/WalletTableViewController.swift"
+            timestampString = "553517858.671803"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "WalletTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.mnemonicWords.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553503774.783294"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.mnemonicWords.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553503774.786551"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.init(style: __C.UITableViewStyle) -&gt; etherWalletTest.WalletTableViewController"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553503774.7907161"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "218">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; etherWalletTest.WalletTableViewController"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553503774.792966"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "286">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;etherWalletTest.WalletTableViewController&gt;"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553503774.796506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "199">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/CreatMnemonicViewController.swift"
+            timestampString = "553517858.671881"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/WalletTableViewController.swift"
+            timestampString = "553517858.671932"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "WalletTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/WalletTableViewController.swift"
+            timestampString = "553517858.6719739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/WalletTableViewController.swift"
+            timestampString = "553517858.672025"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.tableView(__ObjC.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553505637.132876"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "etherWalletTest.WalletTableViewController.tableView(__ObjC.UITableView, numberOfRowsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "etherWalletTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/etherWalletTest/Controller/WalletTableViewController.swift"
+                  timestampString = "553505637.135541"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "837">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/WalletTableViewController.swift"
+            timestampString = "553517858.672067"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "numberOfSections(in:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "etherWalletTest/Controller/WalletTableViewController.swift"
+            timestampString = "553517858.672109"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "WalletTableViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/web3swift/web3swift/Web3/Classes/Web3+Eth.swift"
+            timestampString = "553506797.707845"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "537"
+            endingLineNumber = "537"
+            landmarkName = "getAccounts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Swift.AnyObject, web3swift.Web3Error&gt;) -&gt; () in web3swift.web3.Eth.getAccounts() -&gt; Result.Result&lt;Swift.Array&lt;web3swift.EthereumAddress&gt;, web3swift.Web3Error&gt;"
+                  moduleName = "web3swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/Pods/web3swift/web3swift/Web3/Classes/Web3+Eth.swift"
+                  timestampString = "553534386.281075"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "538"
+                  endingLineNumber = "538"
+                  offsetFromSymbolStart = "514">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Array&lt;web3swift.EthereumAddress&gt; in closure #1 (Result.Result&lt;Swift.AnyObject, web3swift.Web3Error&gt;) -&gt; () in web3swift.web3.Eth.getAccounts() -&gt; Result.Result&lt;Swift.Array&lt;web3swift.EthereumAddress&gt;, web3swift.Web3Error&gt;"
+                  moduleName = "web3swift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/activate/Desktop/IOS_Training/etherWalletTest/Pods/web3swift/web3swift/Web3/Classes/Web3+Eth.swift"
+                  timestampString = "553534386.283547"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "538"
+                  endingLineNumber = "538"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
