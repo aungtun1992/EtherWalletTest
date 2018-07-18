@@ -7,14 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-class WalletData{
-    var type : String
-    var address : String
-    var balance : String
-    public init(type: String, addr: String, bal: String){
-        self.type = type
-        address = addr
-        balance = bal
-    }
+class WalletData : Object{
+    @objc dynamic var type : String = ""
+    @objc dynamic var address : String = ""
+    @objc dynamic var balance : String = ""
+
+//    public init(type: String, addr: String, bal: String){
+//        self.type = type
+//        address = addr
+//        balance = bal
+//    }
 }

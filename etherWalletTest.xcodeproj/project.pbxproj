@@ -21,6 +21,8 @@
 		BD45413620FC79480069A731 /* EthWalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413520FC79480069A731 /* EthWalletManager.swift */; };
 		BD45413820FC7A700069A731 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413720FC7A700069A731 /* Strings.swift */; };
 		BD45413A20FC89F70069A731 /* CreateImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413920FC89F70069A731 /* CreateImportViewController.swift */; };
+		BD7064BD20FEE1EF00D26585 /* WalletDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7064BC20FEE1EF00D26585 /* WalletDetailViewController.swift */; };
+		BD7064E120FF10C300D26585 /* SendDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7064E020FF10C300D26585 /* SendDetialViewController.swift */; };
 		BDB4F86C20FDD9E500F9DAAD /* WalletData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */; };
 		BDE5BF2220FDFF9300328104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45410A20FB7FA60069A731 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		BD45413520FC79480069A731 /* EthWalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthWalletManager.swift; sourceTree = "<group>"; };
 		BD45413720FC7A700069A731 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		BD45413920FC89F70069A731 /* CreateImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImportViewController.swift; sourceTree = "<group>"; };
+		BD7064BC20FEE1EF00D26585 /* WalletDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailViewController.swift; sourceTree = "<group>"; };
+		BD7064E020FF10C300D26585 /* SendDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDetialViewController.swift; sourceTree = "<group>"; };
 		BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,11 +94,11 @@
 		BD45410520FB7FA60069A731 /* etherWalletTest */ = {
 			isa = PBXGroup;
 			children = (
-				BD45411920FB7FC60069A731 /* Model */,
+				BD45410620FB7FA60069A731 /* AppDelegate.swift */,
 				BD45411820FB7FBD0069A731 /* View */,
+				BD45411920FB7FC60069A731 /* Model */,
 				BD45411A20FB7FCB0069A731 /* Controller */,
 				BD45411D20FB8FC00069A731 /* Supporting */,
-				BD45410620FB7FA60069A731 /* AppDelegate.swift */,
 				BD45411220FB7FA80069A731 /* Info.plist */,
 			);
 			path = etherWalletTest;
@@ -103,9 +107,9 @@
 		BD45411820FB7FBD0069A731 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BD45412C20FC332F0069A731 /* CustomCells */,
 				BD45410F20FB7FA80069A731 /* LaunchScreen.storyboard */,
 				BD45410A20FB7FA60069A731 /* Main.storyboard */,
+				BD45412C20FC332F0069A731 /* CustomCells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +132,8 @@
 				BD45413320FC5D0D0069A731 /* CreatMnemonicViewController.swift */,
 				BD45413120FC52A10069A731 /* ImportWalletViewController.swift */,
 				BD45412D20FC39A30069A731 /* WalletTableViewController.swift */,
+				BD7064BC20FEE1EF00D26585 /* WalletDetailViewController.swift */,
+				BD7064E020FF10C300D26585 /* SendDetialViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -299,9 +305,11 @@
 				BD45413820FC7A700069A731 /* Strings.swift in Sources */,
 				BD45413A20FC89F70069A731 /* CreateImportViewController.swift in Sources */,
 				BDB4F86C20FDD9E500F9DAAD /* WalletData.swift in Sources */,
+				BD7064E120FF10C300D26585 /* SendDetialViewController.swift in Sources */,
 				BD45413620FC79480069A731 /* EthWalletManager.swift in Sources */,
 				BD45412E20FC39A30069A731 /* WalletTableViewController.swift in Sources */,
 				BD45413220FC52A10069A731 /* ImportWalletViewController.swift in Sources */,
+				BD7064BD20FEE1EF00D26585 /* WalletDetailViewController.swift in Sources */,
 				BD45413420FC5D0E0069A731 /* CreatMnemonicViewController.swift in Sources */,
 				BD45410720FB7FA60069A731 /* AppDelegate.swift in Sources */,
 			);
