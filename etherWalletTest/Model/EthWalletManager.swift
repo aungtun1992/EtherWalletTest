@@ -121,5 +121,6 @@ class EthWalletManager {
         case .infuraRinkeby:
             web3Net = Web3.InfuraRinkebyWeb3()
         }
+        
     }
 }

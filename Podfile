@@ -9,6 +9,7 @@ target 'etherWalletTest' do
     pod 'RealmSwift'
     pod 'SVProgressHUD'
     pod 'web3swift', '~> 0.8.0'
+    pod 'QRCodeReader.swift', '~> 8.2.0'
 end
 
 source 'https://github.com/CocoaPods/Specs.git'

@@ -30,7 +30,7 @@ class CreateMnemonicViewController: UIViewController {
     //---------------------------------------------------------------------------------------------
     func generateMnemonicWords()
     {
-        let language: BIP39Language = .english
+        let language: BIP39Language = .chinese_simplified
         var mnemonic : String?
         do {
             mnemonic = try (BIP39.generateMnemonics(bitsOfEntropy: 128, language: language))

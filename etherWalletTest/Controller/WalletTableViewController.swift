@@ -24,12 +24,21 @@ class WalletTableViewController: UITableViewController{
     
     var strings = Strings()
     
+    var refresher : UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         walletTableView.separatorStyle = .none
         walletTableView.rowHeight = 90
         walletTableView.estimatedRowHeight = 120.0
         walletTableView.register(UINib(nibName: "WalletTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomWalletCell")
+        
+        
+        refresher = UIRefreshControl()
+        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refresher.addTarget(self, action: #selector(WalletTableViewController.updateCachedDataFromEthereum), for: UIControlEvents.valueChanged)
+        walletTableView.addSubview(refresher)
+        
         loadCachedRealmData()
         updateCachedDataFromEthereum()
     }
@@ -69,6 +78,7 @@ class WalletTableViewController: UITableViewController{
         performSegue(withIdentifier: "goToDetailView", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "goToDetailView"){
             let destinationVC = segue.destination as! WalletDetailViewController
@@ -80,25 +90,14 @@ class WalletTableViewController: UITableViewController{
         }
     }
     
-    func updateCachedDataFromEthereum(){
+    @objc func updateCachedDataFromEthereum(){
+        
         //ellaborate way to check the address
         //Reason, add account will rearrage the order
         if let _ethWM = ethWM {
             _ethWM.bip32KSManager.addresses?.forEach({ (web3AccountAddress) in
                 print("Debug: Existing Address in AccManager - \(web3AccountAddress.address)")
                 var exist = false
-//                cachedWalletsInRealm?.forEach({ (cachedWallet) in
-//                    print("Debug: Existing Address in CachedWallet - \(cachedWallet.address)")
-//                    if(cachedWallet.address == web3AccountAddress.address){
-//                        print("Debug: They are the same")
-//                        exist = true
-//                        let bal = _ethWM.web3Net?.eth.getBalance(address: web3AccountAddress)
-//                        let balString = Web3Utils.formatToEthereumUnits((bal!.value)!)
-//                        print("Debug: Updated the balance \(cachedWallet.balance) to \(String(describing: balString!))")
-//                        cachedWallet.balance = balString!
-//                        return;
-//                    }
-//                })
                 if let cachedWallets = cachedWalletsInRealm {
                     for index in 0..<cachedWallets.count{
                         print("Debug: Existing Address in CachedWallet - \(cachedWallets[index].address)")
@@ -141,6 +140,8 @@ class WalletTableViewController: UITableViewController{
                 }
             })
         }
+        walletTableView.reloadData()
+        refresher.endRefreshing()
     }
     func addNewCachedWalletData(walletData : WalletData){
         do{
