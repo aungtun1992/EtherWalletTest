@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:etherWalletTest/Supporting/Assets.xcassets">
+   </FileRef>
+   <FileRef
       location = "group:etherWalletTest.xcodeproj">
    </FileRef>
    <FileRef

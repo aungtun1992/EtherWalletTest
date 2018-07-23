@@ -1,32 +1,38 @@
 //
-//  ImportWalletViewController.swift
+//  AddCustomCoinViewController.swift
 //  etherWalletTest
 //
-//  Created by Activate on 16/7/18.
+//  Created by Activate on 19/7/18.
 //  Copyright © 2018 Activate. All rights reserved.
 //
 
 import UIKit
-import SVProgressHUD
 
-class ImportWalletViewController: UIViewController {
+protocol handleCustomTokenAddition {
+    func addCustomToken(addr: String)
+}
 
-    @IBOutlet weak var mnemonicInput: UITextView!
+class AddCustomCoinViewController: UIViewController {
+
+    @IBOutlet weak var blankArea: UIView!
+    @IBOutlet weak var tokenAddress: UITextField!
+    @IBOutlet weak var decimal: UITextField!
     
-    var ethWM: EthWalletManager?
-    var strings = Strings()
+    var delegate : handleCustomTokenAddition?
     
+    //MARK: - View Loading
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //MARK: - Observer for Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(AddCustomCoinViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AddCustomCoinViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     //MARK: - What to do when keyboard showup
     //---------------------------------------------------------------------------------------------
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -44,33 +50,20 @@ class ImportWalletViewController: UIViewController {
         }
     }
     
-    //MARK: - Button Press Actions
+    //MARK: - UI Interactions
     //---------------------------------------------------------------------------------------------
-
-    @IBAction func importButtonPressed(_ sender: Any) {
-        if(mnemonicInput.text.count<12){
-            let alert = UIAlertController(title: strings.ErrMsgWrgPassphrase, message: "", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Okay", style: .default) { (action) in
-            }
-            alert.addAction(action)
-            present(alert, animated: true)
-        }
-        else{
-            SVProgressHUD.show()
-            ethWM = EthWalletManager.init(mnemonicWords: mnemonicInput.text!)
-            performSegue(withIdentifier: "importGoToWallet", sender: self)
+    @IBAction func backButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch? = touches.first
+        if touch?.view == blankArea {
+            dismiss(animated: true, completion: nil)
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Debug: it is preparing for segue to wallet table view from import view")
-        let navigationVC = segue.destination as! UINavigationController
-        let tableVC = navigationVC.viewControllers.first as! WalletTableViewController
-        //tableVC.mnemonicWords = mnemonicInput.text!
-        tableVC.ethWM = ethWM
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        SVProgressHUD.dismiss()
+    @IBAction func addPressed(_ sender: Any) {
+        delegate?.addCustomToken(addr: tokenAddress.text!)
+        dismiss(animated: true, completion: nil)
     }
 }

@@ -16,16 +16,16 @@ class WalletDetailViewController: UIViewController {
     @IBOutlet weak var CoinNameTitle: UINavigationItem!
     
     var ethWM : EthWalletManager?
-    var address : String = ""
-    var coinType : String = ""
     
+    var coinName : String = ""
+    var address : String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
         addressLabel.text = address
-        CoinNameTitle.title = coinType
+        CoinNameTitle.title = coinName
         
         if let _ethWM = ethWM {
             if let coldWalletAddress = EthereumAddress(address){

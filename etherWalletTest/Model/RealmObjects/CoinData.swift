@@ -9,14 +9,10 @@
 import Foundation
 import RealmSwift
 
-class WalletData : Object{
-    @objc dynamic var type : String = ""
+class CoinData : Object{
+    @objc dynamic var name : String = ""
     @objc dynamic var address : String = ""
     @objc dynamic var balance : String = ""
-
-//    public init(type: String, addr: String, bal: String){
-//        self.type = type
-//        address = addr
-//        balance = bal
-//    }
+    let tokens = List<TokenData>()
 }
+

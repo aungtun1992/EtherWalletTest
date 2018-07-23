@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "BinancIcon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ethereum-1.png",
+      "filename" : "BinancIcon-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "BinancIcon-2.png",
       "scale" : "3x"
     }
   ],

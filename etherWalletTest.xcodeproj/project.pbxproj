@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		87A8B39ADEA45985AF4D5CB2 /* Pods_etherWalletTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C61430A4BC982742AB197C /* Pods_etherWalletTest.framework */; };
+		BD2CC7822100865100AE0124 /* TokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2CC7812100865100AE0124 /* TokenData.swift */; };
+		BD2CC7862101819000AE0124 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2CC7852101819000AE0124 /* Images.xcassets */; };
 		BD45410720FB7FA60069A731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45410620FB7FA60069A731 /* AppDelegate.swift */; };
 		BD45410920FB7FA60069A731 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45410820FB7FA60069A731 /* mainViewController.swift */; };
-		BD45410E20FB7FA80069A731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45410D20FB7FA80069A731 /* Assets.xcassets */; };
 		BD45411120FB7FA80069A731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45410F20FB7FA80069A731 /* LaunchScreen.storyboard */; };
 		BD45411F20FB90320069A731 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD45411E20FB90320069A731 /* Default-568h@2x.png */; };
 		BD45412A20FC33100069A731 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45412820FC33100069A731 /* WalletTableViewCell.swift */; };
@@ -23,7 +24,12 @@
 		BD45413A20FC89F70069A731 /* CreateImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45413920FC89F70069A731 /* CreateImportViewController.swift */; };
 		BD7064BD20FEE1EF00D26585 /* WalletDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7064BC20FEE1EF00D26585 /* WalletDetailViewController.swift */; };
 		BD7064E120FF10C300D26585 /* SendDetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7064E020FF10C300D26585 /* SendDetialViewController.swift */; };
-		BDB4F86C20FDD9E500F9DAAD /* WalletData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */; };
+		BDB4F86C20FDD9E500F9DAAD /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB4F86B20FDD9E500F9DAAD /* CoinData.swift */; };
+		BDB7E75821001F3600FF142F /* CoinTypesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7E75621001F3600FF142F /* CoinTypesTableViewCell.swift */; };
+		BDB7E75921001F3600FF142F /* CoinTypesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDB7E75721001F3600FF142F /* CoinTypesTableViewCell.xib */; };
+		BDB7E75B21002A5900FF142F /* AddCustomCoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7E75A21002A5900FF142F /* AddCustomCoinViewController.swift */; };
+		BDB7E75F21003E1C00FF142F /* AddNewWalletTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7E75E21003E1C00FF142F /* AddNewWalletTableViewController.swift */; };
+		BDB7E761210044E000FF142F /* WalletTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7E760210044E000FF142F /* WalletTypes.swift */; };
 		BDE5BF2220FDFF9300328104 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45410A20FB7FA60069A731 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -31,11 +37,12 @@
 		01C61430A4BC982742AB197C /* Pods_etherWalletTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_etherWalletTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B2198A76F2F9D69BB7304A3 /* Pods-etherWalletTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etherWalletTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-etherWalletTest/Pods-etherWalletTest.release.xcconfig"; sourceTree = "<group>"; };
 		4C21D93023A00DC7E7F535AC /* Pods-etherWalletTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-etherWalletTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-etherWalletTest/Pods-etherWalletTest.debug.xcconfig"; sourceTree = "<group>"; };
+		BD2CC7812100865100AE0124 /* TokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenData.swift; sourceTree = "<group>"; };
+		BD2CC7852101819000AE0124 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BD45410320FB7FA60069A731 /* etherWalletTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = etherWalletTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD45410620FB7FA60069A731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD45410820FB7FA60069A731 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		BD45410B20FB7FA60069A731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BD45410D20FB7FA80069A731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD45411020FB7FA80069A731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD45411220FB7FA80069A731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD45411E20FB90320069A731 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -49,7 +56,12 @@
 		BD45413920FC89F70069A731 /* CreateImportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImportViewController.swift; sourceTree = "<group>"; };
 		BD7064BC20FEE1EF00D26585 /* WalletDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletDetailViewController.swift; sourceTree = "<group>"; };
 		BD7064E020FF10C300D26585 /* SendDetialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendDetialViewController.swift; sourceTree = "<group>"; };
-		BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletData.swift; sourceTree = "<group>"; };
+		BDB4F86B20FDD9E500F9DAAD /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
+		BDB7E75621001F3600FF142F /* CoinTypesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTypesTableViewCell.swift; sourceTree = "<group>"; };
+		BDB7E75721001F3600FF142F /* CoinTypesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinTypesTableViewCell.xib; sourceTree = "<group>"; };
+		BDB7E75A21002A5900FF142F /* AddCustomCoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomCoinViewController.swift; sourceTree = "<group>"; };
+		BDB7E75E21003E1C00FF142F /* AddNewWalletTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWalletTableViewController.swift; sourceTree = "<group>"; };
+		BDB7E760210044E000FF142F /* WalletTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,15 @@
 				01C61430A4BC982742AB197C /* Pods_etherWalletTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD2CC78821018B5200AE0124 /* RealmObjects */ = {
+			isa = PBXGroup;
+			children = (
+				BDB4F86B20FDD9E500F9DAAD /* CoinData.swift */,
+				BD2CC7812100865100AE0124 /* TokenData.swift */,
+			);
+			path = RealmObjects;
 			sourceTree = "<group>";
 		};
 		BD4540FA20FB7FA60069A731 = {
@@ -117,9 +138,10 @@
 		BD45411920FB7FC60069A731 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BD45413520FC79480069A731 /* EthWalletManager.swift */,
 				BD45413720FC7A700069A731 /* Strings.swift */,
-				BDB4F86B20FDD9E500F9DAAD /* WalletData.swift */,
+				BD45413520FC79480069A731 /* EthWalletManager.swift */,
+				BDB7E760210044E000FF142F /* WalletTypes.swift */,
+				BD2CC78821018B5200AE0124 /* RealmObjects */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +156,8 @@
 				BD45412D20FC39A30069A731 /* WalletTableViewController.swift */,
 				BD7064BC20FEE1EF00D26585 /* WalletDetailViewController.swift */,
 				BD7064E020FF10C300D26585 /* SendDetialViewController.swift */,
+				BDB7E75E21003E1C00FF142F /* AddNewWalletTableViewController.swift */,
+				BDB7E75A21002A5900FF142F /* AddCustomCoinViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,7 +165,7 @@
 		BD45411D20FB8FC00069A731 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				BD45410D20FB7FA80069A731 /* Assets.xcassets */,
+				BD2CC7852101819000AE0124 /* Images.xcassets */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -151,6 +175,8 @@
 			children = (
 				BD45412820FC33100069A731 /* WalletTableViewCell.swift */,
 				BD45412920FC33100069A731 /* WalletTableViewCell.xib */,
+				BDB7E75621001F3600FF142F /* CoinTypesTableViewCell.swift */,
+				BDB7E75721001F3600FF142F /* CoinTypesTableViewCell.xib */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -227,8 +253,9 @@
 				BD45411120FB7FA80069A731 /* LaunchScreen.storyboard in Resources */,
 				BDE5BF2220FDFF9300328104 /* Main.storyboard in Resources */,
 				BD45411F20FB90320069A731 /* Default-568h@2x.png in Resources */,
+				BD2CC7862101819000AE0124 /* Images.xcassets in Resources */,
 				BD45412B20FC33100069A731 /* WalletTableViewCell.xib in Resources */,
-				BD45410E20FB7FA80069A731 /* Assets.xcassets in Resources */,
+				BDB7E75921001F3600FF142F /* CoinTypesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +333,18 @@
 				BD45410920FB7FA60069A731 /* mainViewController.swift in Sources */,
 				BD45413820FC7A700069A731 /* Strings.swift in Sources */,
 				BD45413A20FC89F70069A731 /* CreateImportViewController.swift in Sources */,
-				BDB4F86C20FDD9E500F9DAAD /* WalletData.swift in Sources */,
+				BDB7E75F21003E1C00FF142F /* AddNewWalletTableViewController.swift in Sources */,
+				BDB4F86C20FDD9E500F9DAAD /* CoinData.swift in Sources */,
 				BD7064E120FF10C300D26585 /* SendDetialViewController.swift in Sources */,
 				BD45413620FC79480069A731 /* EthWalletManager.swift in Sources */,
+				BDB7E75821001F3600FF142F /* CoinTypesTableViewCell.swift in Sources */,
 				BD45412E20FC39A30069A731 /* WalletTableViewController.swift in Sources */,
+				BD2CC7822100865100AE0124 /* TokenData.swift in Sources */,
+				BDB7E761210044E000FF142F /* WalletTypes.swift in Sources */,
 				BD45413220FC52A10069A731 /* ImportWalletViewController.swift in Sources */,
 				BD7064BD20FEE1EF00D26585 /* WalletDetailViewController.swift in Sources */,
 				BD45413420FC5D0E0069A731 /* CreatMnemonicViewController.swift in Sources */,
+				BDB7E75B21002A5900FF142F /* AddCustomCoinViewController.swift in Sources */,
 				BD45410720FB7FA60069A731 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

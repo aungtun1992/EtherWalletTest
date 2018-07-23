@@ -30,7 +30,7 @@ class CreateMnemonicViewController: UIViewController {
     //---------------------------------------------------------------------------------------------
     func generateMnemonicWords()
     {
-        let language: BIP39Language = .chinese_simplified
+        let language: BIP39Language = .english
         var mnemonic : String?
         do {
             mnemonic = try (BIP39.generateMnemonics(bitsOfEntropy: 128, language: language))
@@ -53,7 +53,7 @@ class CreateMnemonicViewController: UIViewController {
         print("Debug: it is preparing for segue to wallet table view from menmonic view")
         let navigationVC = segue.destination as! UINavigationController
         let tableVC = navigationVC.viewControllers.first as! WalletTableViewController
-        tableVC.mnemonicWords = mnemoniclabel.text
+        //tableVC.mnemonicWords = mnemoniclabel.text
         tableVC.ethWM = ethWM
     }
     
