@@ -136,65 +136,60 @@ extension EthWalletManager{
             return ""
         }
     }
-//    func updateDataFromEthereum(etherCoins : Results<CoinData>){
-//        bip32KSManager.addresses?.forEach({ (web3AccountAddress) in
-//            print("Debug: Existing Address in AccManager - \(web3AccountAddress.address)")
-//            var exist = false
-//
-//            for index in 0..<etherCoins.count{
-//                print("Debug: Existing Address in CachedWallet - \(etherCoins[index].address)")
-//                if(etherCoins[index].address == web3AccountAddress.address){
-//                    print("Debug: They are the same")
-//                    exist = true
-//                    let bal = web3Net?.eth.getBalance(address: web3AccountAddress)
-//                    let balString = Web3Utils.formatToEthereumUnits((bal!.value)!)
-//                    print("Debug: Updated the balance \(etherCoins[index].balance) to \(String(describing: balString!))")
-//                    updateCachedWalletDataBalance(index: index, amt: balString!)
-//                    return;
-//                }
-//            }
-//        })
-//        if let _ethWM = ethWM {
-//            _ethWM.bip32KSManager.addresses?.forEach({ (web3AccountAddress) in
-//                print("Debug: Existing Address in AccManager - \(web3AccountAddress.address)")
-//                var exist = false
-//
-//                if let _cachedWalletsInRealm = cachedCoinData {
-//                    for index in 0..<_cachedWalletsInRealm.count{
-//                        print("Debug: Existing Address in CachedWallet - \(_cachedWalletsInRealm[index].address)")
-//                        if(_cachedWalletsInRealm[index].address == web3AccountAddress.address){
-//                            print("Debug: They are the same")
-//                            exist = true
-//                            let bal = _ethWM.web3Net?.eth.getBalance(address: web3AccountAddress)
-//                            let balString = Web3Utils.formatToEthereumUnits((bal!.value)!)
-//                            print("Debug: Updated the balance \(_cachedWalletsInRealm[index].balance) to \(String(describing: balString!))")
-//                            updateCachedWalletDataBalance(index: index, amt: balString!)
-//                            return;
-//                        }
-//                    }
-//                    if(exist == false){
-//                        print("Debug: They are NOT the same")
-//
-//                        let type = "Ethereum"
-//                        let addr = web3AccountAddress.address
-//                        let bal = _ethWM.web3Net?.eth.getBalance(address: web3AccountAddress)
-//                        let balString = Web3Utils.formatToEthereumUnits((bal!.value)!)
-//
-//                        print("Debug: Adding the new data to the realm")
-//
-//                        let newWallet = CoinData()
-//                        newWallet.name = type
-//                        newWallet.address = addr
-//                        newWallet.balance = balString!
-//                        addNewCachedWalletData(walletData: newWallet)
-//                    }
-//                    print("------------------------------------------------------------------")
-//                }
-//            })
-//        }
-//    }
-    
-    
+    func sentEther(fromAddr:String, toAddr : String, amount : String){
+        let etherABI = "[{\"payable\":true,\"type\":\"fallback\"}]"
+        print("Debug: coldWalletABI \(etherABI)")
+        print("-----------------------------------------------------------")
+        
+        let toAddress = EthereumAddress(toAddr)!
+        print("Debug: coldWalletAddress \(toAddress)")
+        print("-----------------------------------------------------------")
+        
+        var options = Web3Options.defaultOptions()
+        print("Debug: options \(options)")
+        print("-----------------------------------------------------------")
+        
+        let gasPriceResult = web3Net?.eth.getGasPrice()
+        print("Debug: gasPriceResult \(String(describing: gasPriceResult))")
+        print("-----------------------------------------------------------")
+        guard case .success(let gasPrice)? = gasPriceResult else {return}
+        options.gasPrice = gasPrice
+        print("Debug: gasPrice \(gasPrice)")
+        print("-----------------------------------------------------------")
+        
+        options.value = Web3Utils.parseToBigUInt(amount, units: Web3.Utils.Units.eth)
+        print("Debug: options.value \(String(describing: options.value))")
+        print("-----------------------------------------------------------")
+        
+        options.from = EthereumAddress(fromAddr)!
+        print("Debug: from \(String(describing: options.from))")
+        print("-----------------------------------------------------------")
+        
+        let estimatedGasResult = web3Net?.contract(etherABI, at: toAddress)!.method(options: options)!.estimateGas(options: nil)
+        print("Debug: estimatedGasResult \(String(describing: estimatedGasResult))")
+        print("-----------------------------------------------------------")
+        guard case .success(let estimatedGas)? = estimatedGasResult else {return}
+        options.gasLimit = estimatedGas
+        print("Debug: gasLimit \(String(describing: options.gasLimit))")
+        print("-----------------------------------------------------------")
+        
+        let intermediateSend = web3Net?.contract(etherABI, at: toAddress, abiVersion: 2)!.method(options: options)!
+        let sendResultBip32 = intermediateSend?.send(password: Strings().password)
+        print("Debug: sendResultBip32 \(String(describing: sendResultBip32))")
+        print("-----------------------------------------------------------")
+        
+        switch sendResultBip32 {
+        case .success(let r)?:
+            print("Debug : Send Success")
+            print(r)
+        case .failure(let err)?:
+            print("Debug : Send Error")
+            print(err)
+        case .none:
+            print("Debug : Send Error")
+            print("Return nothing")
+        }
+    }
 }
 
 //MARK: - Ethereum Token Handling
@@ -239,5 +234,36 @@ extension EthWalletManager{
             return String(tokenBalance)
         }
         return ""
+    }
+    func sendToken(fromAddr : String, toAddr : String, contractAddr : String, amount: String){
+        
+        var tokenTransferOptions = Web3Options.defaultOptions()
+        let gasPriceResult = web3Net?.eth.getGasPrice()
+        guard case .success(let gasPrice)? = gasPriceResult else {return}
+        tokenTransferOptions.gasPrice = gasPrice
+        tokenTransferOptions.from = EthereumAddress(fromAddr)!
+        
+        
+        let testToken = web3Net?.contract(Web3.Utils.erc20ABI, at: EthereumAddress(contractAddr)!, abiVersion: 2)!
+        
+        
+        let amt = BigUInt(amount)
+        print(amt)
+        let intermediateForTokenTransfer = testToken?.method("transfer", parameters: [EthereumAddress(toAddr)!, amt!] as [AnyObject], options: tokenTransferOptions)!
+        let gasEstimateResult = intermediateForTokenTransfer?.estimateGas(options: nil)
+        guard case .success(let gasEstimate)? = gasEstimateResult else {return}
+        var optionsWithCustomGasLimit = Web3Options()
+        optionsWithCustomGasLimit.gasLimit = gasEstimate
+        let tokenTransferResult = intermediateForTokenTransfer?.send(password: Strings().password, options: optionsWithCustomGasLimit)
+        switch tokenTransferResult {
+        case .success(let res)?:
+            print("Token transfer successful")
+            print(res)
+        case .failure(let error)?:
+            print(error)
+        case .none:
+            print("error")
+        }
+        
     }
 }

@@ -19,7 +19,9 @@ class SendDetialViewController: UIViewController, QRCodeReaderViewControllerDele
     @IBOutlet weak var amount: UITextField!
     
     var ethWM : EthWalletManager?
-    var address : String = ""
+    var fromAddress : String = ""
+    var coinName : String = ""
+    var walletType = WalletTypes()
     
     lazy var reader: QRCodeReader = QRCodeReader()
     lazy var readerVC: QRCodeReaderViewController = {
@@ -60,61 +62,13 @@ class SendDetialViewController: UIViewController, QRCodeReaderViewControllerDele
     }
     
     @IBAction func sendPressed(_ sender: Any) {
-        
-        print("Debug: Pressed send")
-
-        let coldWalletABI = "[{\"payable\":true,\"type\":\"fallback\"}]"
-        print("Debug: coldWalletABI \(coldWalletABI)")
-        print("-----------------------------------------------------------")
-
-        let coldWalletAddress = EthereumAddress(toAddress.text!)!
-        print("Debug: coldWalletAddress \(coldWalletAddress)")
-        print("-----------------------------------------------------------")
-
-        var options = Web3Options.defaultOptions()
-        print("Debug: options \(options)")
-        print("-----------------------------------------------------------")
-
-        let gasPriceResult = ethWM?.web3Net?.eth.getGasPrice()
-        print("Debug: gasPriceResult \(String(describing: gasPriceResult))")
-        print("-----------------------------------------------------------")
-        guard case .success(let gasPrice)? = gasPriceResult else {return}
-        options.gasPrice = gasPrice
-        print("Debug: gasPrice \(gasPrice)")
-        print("-----------------------------------------------------------")
-
-
-        options.value = Web3Utils.parseToBigUInt(amount.text!, units: Web3.Utils.Units.eth)
-        print("Debug: options.value \(String(describing: options.value))")
-        print("-----------------------------------------------------------")
-
-        options.from = EthereumAddress(address)!
-        print("Debug: from \(String(describing: options.from))")
-        print("-----------------------------------------------------------")
-
-        let estimatedGasResult = ethWM?.web3Net?.contract(coldWalletABI, at: coldWalletAddress)!.method(options: options)!.estimateGas(options: nil)
-        print("Debug: estimatedGasResult \(String(describing: estimatedGasResult))")
-        print("-----------------------------------------------------------")
-        guard case .success(let estimatedGas)? = estimatedGasResult else {return}
-        options.gasLimit = estimatedGas
-        print("Debug: gasLimit \(String(describing: options.gasLimit))")
-        print("-----------------------------------------------------------")
-
-        let intermediateSend = ethWM?.web3Net?.contract(coldWalletABI, at: coldWalletAddress, abiVersion: 2)!.method(options: options)!
-        let sendResultBip32 = intermediateSend?.send(password: Strings().password)
-        print("Debug: sendResultBip32 \(String(describing: sendResultBip32))")
-        print("-----------------------------------------------------------")
-
-        switch sendResultBip32 {
-            case .success(let r)?:
-                print("Debug : Send Success")
-                print(r)
-            case .failure(let err)?:
-                print("Debug : Send Error")
-                print(err)
-            case .none:
-                print("Debug : Send Error")
-                print("Return nothing")
+        if walletType.coinDetails.keys.contains(coinName){
+            ethWM?.sentEther(fromAddr: fromAddress, toAddr: toAddress.text!, amount: amount.text!)
+        }else if walletType.tokenDetails.keys.contains(coinName){
+            let tknAddr = walletType.tokenDetails[coinName]?.tokenAddress
+            ethWM?.sendToken(fromAddr: fromAddress, toAddr: toAddress.text!, contractAddr: tknAddr!, amount: amount.text!)
+        }else{
+            print("Debug: Wrong Coin Name while sending")
         }
         dismiss(animated: true, completion: nil)
     }

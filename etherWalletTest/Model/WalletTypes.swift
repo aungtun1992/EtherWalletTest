@@ -72,27 +72,25 @@ class WalletTypes{
         }
         
     }
-    func addToken(name : String, tokenAddr: String, tokenOwner: String, balance: String){
-
-        //Add the CustomToken to predefied list
-        let token = Token(name: name, tokenAddress: tokenAddr,  imageName: "default")
-        tokenDetails[name] = token
-        //Create CustomToken and Save in Relam
-        let tkn = TokenData()
-        tkn.name = name
-        tkn.tokenAddress = tokenAddr
-        tkn.ownerAddress = tokenOwner
-        tkn.balance = balance
-        saveTokenDataToRealm(token: tkn)
-    }
-    
-    func saveTokenDataToRealm(token: TokenData){
-        do{
-            try realm.write{
-                realm.add(token)
-            }
-        }catch{
-            print("Debug: there is an error while writing token data to relam")
-        }
-    }
+//    func addToken(name : String, tokenAddr: String, balance: String){
+//        //Add the CustomToken to predefied list
+//        let token = Token(name: name, tokenAddress: tokenAddr,  imageName: "default")
+//        tokenDetails[name] = token
+//        //Create CustomToken and Save in Relam
+//        let tkn = TokenData()
+//        tkn.name = name
+//        tkn.tokenAddress = tokenAddr
+//        tkn.balance = balance
+//        saveTokenDataToRealm(token: tkn)
+//    }
+//    
+//    func saveTokenDataToRealm(token: TokenData){
+//        do{
+//            try realm.write{
+//                realm.add(token)
+//            }
+//        }catch{
+//            print("Debug: there is an error while writing token data to relam")
+//        }
+//    }
 }

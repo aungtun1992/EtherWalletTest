@@ -205,7 +205,7 @@ class WalletTableViewController: UITableViewController{
 //---------------------------------------------------------------------------------------------
 extension WalletTableViewController :  handleWalletTypeSelection{
     func selectedWalletIsToken(token: Token) {
-        if token.type == "ERC20"{
+        if token.type == "ERC20" {
             if let etherCoinData = cachedCoinData?.filter("name =[cd] %@", "Ethereum"){
                 if etherCoinData.count < 1{
                     addEthereumWallet()
@@ -227,13 +227,19 @@ extension WalletTableViewController :  handleWalletTypeSelection{
                                 print("Error saving to realm \(error)")
                             }
                             break
+                        }else if i == etherCoinData.count - 1{
+                            addEthereumWallet()
+                            selectedWalletIsToken(token: token)
                         }
+                        
                     }
                 }
             }else{
                 print("Debug: There is a problem with filtering cachedCoinData")
             }
         }
+        updateCachedCoinData()
+        walletTableView.reloadData()
     }
     
     func selectedWalletIsCoin(type: Coin) {
@@ -260,8 +266,15 @@ extension WalletTableViewController{
         if(segue.identifier == "goToDetailView"){
             let destinationVC = segue.destination as! WalletDetailViewController
             if let indexPath = walletTableView.indexPathForSelectedRow {
-                destinationVC.address = cachedCoinData![indexPath.row].address
-                destinationVC.coinName = cachedCoinData![indexPath.row].name
+                guard let coinDataCount = cachedCoinData?.count else {fatalError()}
+                if indexPath.row < coinDataCount{
+                    destinationVC.address = cachedCoinData![indexPath.row].address
+                    destinationVC.coinName = cachedCoinData![indexPath.row].name
+                }
+                else{
+                    destinationVC.coinName = cachedTokenData![indexPath.row - coinDataCount].name
+                    destinationVC.address = cachedTokenData![indexPath.row - coinDataCount].ownerAddr[0].address
+                }
             }
             destinationVC.ethWM = self.ethWM
         }

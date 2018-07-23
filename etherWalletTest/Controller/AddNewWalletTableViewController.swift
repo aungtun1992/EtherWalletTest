@@ -89,8 +89,8 @@ class AddNewWalletTableViewController: UITableViewController {
         }else{
             print("Debug: Selected Coin is not in the list")
         }
-        //self.navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+        //dismiss(animated: true, completion: nil)
     }
     
     

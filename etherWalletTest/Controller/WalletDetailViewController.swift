@@ -10,16 +10,15 @@ import UIKit
 import web3swift
 
 class WalletDetailViewController: UIViewController {
-
+    @IBOutlet weak var CoinNameTitle: UINavigationItem!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var balanceLabel: UILabel!
-    @IBOutlet weak var CoinNameTitle: UINavigationItem!
     
     var ethWM : EthWalletManager?
-    
     var coinName : String = ""
     var address : String = ""
-
+    var walletType = WalletTypes()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,13 +27,19 @@ class WalletDetailViewController: UIViewController {
         CoinNameTitle.title = coinName
         
         if let _ethWM = ethWM {
-            if let coldWalletAddress = EthereumAddress(address){
-                let bal = _ethWM.web3Net?.eth.getBalance(address: coldWalletAddress)
-                let balString = Web3Utils.formatToEthereumUnits((bal!.value)!)
-                balanceLabel.text = balString! + " ETH"
+            if walletType.coinDetails.keys.contains(coinName){
+                if let coldWalletAddress = EthereumAddress(address){
+                    let bal = _ethWM.getEtherBalance(addr: coldWalletAddress)
+                    balanceLabel.text = bal + " ETH"
+                }
+                else{
+                    balanceLabel.text = "0 ETH"
+                }
             }
-            else{
-                balanceLabel.text = "0 ETH"
+            else if walletType.tokenDetails.keys.contains(coinName){
+                let tokenDetail = walletType.tokenDetails[coinName]
+                let bal = _ethWM.getTokenBalance(tokenAddress: (tokenDetail?.tokenAddress)!, ownerAddress: address)
+                balanceLabel.text = bal
             }
         }else{
             fatalError()
@@ -51,7 +56,8 @@ class WalletDetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! SendDetialViewController
         destinationVC.ethWM = ethWM
-        destinationVC.address = address
+        destinationVC.fromAddress = address
+        destinationVC.coinName = coinName
     }
     
 
